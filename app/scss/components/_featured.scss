@@ -1,0 +1,50 @@
+.featured {
+
+
+  &__items {
+    padding: 44px 0 103px 60px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    width: 305px;
+    position: relative;
+
+    &--people::after,
+    &--teache::after,
+    &--heart-book::after {
+      content: '';
+      position: absolute;  
+      width: 65px;
+      height: 65px;
+      top: 0;
+      transform: translate(-70px, -20px);
+    }
+
+    &--people::after {
+      background-image: url(../images/svg/people.svg);
+    }
+
+    &--teache::after {
+      background-image: url(../images/svg/teache.svg);
+    }
+
+    &--heart-book::after {
+      background-image: url(../images/svg/book-heart.svg);
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: $white-opacity-8;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    line-height: 1.7;
+    color: $white-opacity-6;
+  }
+}

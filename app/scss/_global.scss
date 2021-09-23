@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %inter;
+  background-color: $blue-900;
+  color: $white-opacity-4;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  color: $red-500;
+  font-weight: 700;
+  border: 1px solid $red-500;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-align: center;
+  transition: color 0.3s ease-in-out,
+  background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: $white;
+    background-color: $red-500;
+  }
+}

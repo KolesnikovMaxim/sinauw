@@ -1,0 +1,64 @@
+.footer {
+  
+  &__inner{
+    display: grid;
+    grid-template-columns: 234px 850px;
+    justify-content: space-around;
+    padding: 48px 0 86px 0;
+  }
+
+  &__question {
+    font-size: 16px;
+    line-height: 1.7;
+    color: $white-opacity-6;
+    margin-bottom: 24px;
+  }
+
+  &__icon{
+    width: 30px;
+    height: 30px;
+    fill: $white-100;
+    transition: fill 0.3s ease-in-out;
+
+    &:hover {
+      fill: $red-500;
+    }
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    &--facebook {
+      width: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $white-opacity-8;
+    margin-bottom: 17px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    display: block;
+    font-size: 20px;
+    color: $white-opacity-6;
+    margin-bottom: 13px;
+  }
+
+  &__copy {
+    font-size: 16px;
+    text-align: center;
+    color: $blue-300;
+    line-height: 1.2;
+    padding-bottom: 32px;
+  }
+
+}

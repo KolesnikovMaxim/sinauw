@@ -1,0 +1,198 @@
+.skills {
+  background-image: url(../images/skills/figurepng.png);
+  background-repeat: no-repeat;
+  
+  &__inner {
+    display: grid;
+    grid-template-columns: 736px 1fr;
+    padding-bottom: 130px;
+  }
+  
+  &__students {
+    transform: translate(-45px, -10px);
+    position: relative;
+
+    
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 60px;
+      background-color: $blue-opacuty-8;
+      border-radius: 20px;
+      border: 2px solid $blue-opacuty;
+      padding: 40px;
+    }
+
+    &::after {
+      background-image: url(../images/svg/book.svg);
+      top: 55px;
+      right: 35%;
+      left: 72%;
+      transform: rotate(12deg);
+    }
+
+    &::before {
+      background-image: url(../images/svg/lamp.svg);
+      top: 19%;
+      left: 8%;
+      transform: rotate(-9deg);
+    }
+  }
+
+  &__img {
+    max-width: 109%;
+  }
+
+  &__join {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 363px;
+    width: 100%;
+    background-color: $blue-opacuty-8;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid $blue-opacuty;
+    transform: translate(357px, -111px);
+    grid-column-start: 2;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    
+  }
+
+  &__item {
+    position: relative;
+
+    &--user2 {
+       right: 15px;
+    }
+
+    &--user3 {
+      right: 30px;
+    }
+
+    &--user4 {
+      right: 45px;
+    }
+
+    &--user5 {
+      right: 60px;
+      position: relative;
+    }
+  }
+  
+  &__icon{
+    fill: $blue-600;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+  }
+
+  &__text {
+    width: 111px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: $white-300;
+    right: 40px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__last {
+    color: $red-500;
+  }
+
+  &__advance {
+    padding-top: 90px;
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    color: $white-opacity-8;
+    width: 485px;
+    margin-bottom: 30px;
+  }
+
+  &__phrase {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 54px;
+  }
+
+  &__search {
+    margin-bottom: 60px;
+  }
+
+  &__input {
+    padding: 22px 80px 22px 32px;
+    background-color: $blue-800;
+    border-radius: 12px;
+    width: 506px;
+    position: absolute;
+    color: $white-opacity-4;
+
+    &::placeholder {
+      font-size: 16px;
+      color: $white-opacity-4;
+    }
+  }
+
+  &__button {
+    background-color: $blue-700;
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    font-size: 0;
+    cursor: pointer;
+    position: relative;
+    left: 79%;
+    top: 9px;
+  }
+
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: $blue-300;
+    stroke-width: 2;
+    position: relative;
+    left: 72%;
+    top: 21px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 34px;
+  }
+
+  &__direction {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid $blue-opacuty-6;
+
+    
+    &:not(:last-child) {
+      margin: 0 17px 24px 0;
+    }
+  }
+
+  &__direction-link {
+    color: $blue-opacuty-6;
+  }
+
+}

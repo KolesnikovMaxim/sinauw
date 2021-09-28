@@ -1,18 +1,30 @@
 .skills {
   background-image: url(../images/skills/figurepng.png);
   background-repeat: no-repeat;
-  
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/Vector.png);
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 718px;
+    right: 0;
+    bottom: -312px;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: 736px 1fr;
     padding-bottom: 130px;
   }
-  
+
   &__students {
     transform: translate(-45px, -10px);
     position: relative;
 
-    
+
 
     &::after,
     &::before {
@@ -64,14 +76,14 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 50px);
-    
+
   }
 
   &__item {
     position: relative;
 
     &--user2 {
-       right: 15px;
+      right: 15px;
     }
 
     &--user3 {
@@ -87,8 +99,8 @@
       position: relative;
     }
   }
-  
-  &__icon{
+
+  &__icon {
     fill: $blue-600;
     width: 30px;
     height: 30px;
@@ -184,8 +196,10 @@
     padding: 8px 18px;
     border-radius: 8px;
     border: 1px solid $blue-opacuty-6;
+    position: relative;
+    z-index: 10;
 
-    
+
     &:not(:last-child) {
       margin: 0 17px 24px 0;
     }

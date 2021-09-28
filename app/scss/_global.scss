@@ -24,6 +24,22 @@ body {
   padding: 0 15px;
 }
 
+.title {
+  font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
+  color: $white-opacity-8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 18px;
+  color: $white-opacity-4;
+  text-align: center;
+  margin-bottom: 84px;
+}
+
 .button {
   color: $red-500;
   font-weight: 700;
@@ -39,3 +55,4 @@ body {
     background-color: $red-500;
   }
 }
+

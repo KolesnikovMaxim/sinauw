@@ -330,23 +330,263 @@
       <button class="specialization__button button">Show All Classes</button>
   </div>
 </section>
-    <section class="webinar">
+    <!-- Без понятия как, столько врмени убил на это, слайдер тоже отказывается работать нормально, не понимаю как его тоже сделать, зашел в тупик уже с этим блоком, как правильно реализовать этот блок,
+особенно с видео. -->
+<section class="webinar">
   <div class="container">
-    <h2 class="webinar__title">
+    <h2 class="webinar__title title">
       Live Online Webinar
     </h2>
-    <div class="webinar__text">
+    <div class="webinar__text text">
       You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!
     </div>
     <div class="webinar__video">
       <ul class="webinar__items">
         <li class="webinar__item">
-          <video class="webinar__video-item" src=""></video>
+          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
+          <p class="webinar__video-text">
+            How To Build Portofolio as A Designer
+          </p>
           <div class="webinar__controls">
-            .webinar__progress
+            <div class="webinar__play">
+              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
+              <!-- <svg class="webinar__play-icon">
+                <use href="images/sprite.svg#play"></use>
+              </svg> -->
+            </div>
+            <!-- <div class="webinar__progress">
+              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
+                value="invalid">
+            </div> -->
+            <div class="webinar__time">
+              <span class="webinar__min">0:43</span> / 3:12
+            </div>
+            <div class="webinar__sound">
+              <button class="webinar__sound-btn">
+                <svg class="webinar__sound-icon">
+                  <use href="images/sprite.svg#volume"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="webinar__increase">
+              <button class="webinar__increase-btn">
+                <svg class="webinar__increase-icon">
+                  <use href="images/sprite.svg#maximize"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="webinar__item">
+          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
+          <p class="webinar__video-text">
+            How To Build Portofolio as A Designer
+          </p>
+          <div class="webinar__controls">
+            <div class="webinar__play">
+              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
+              <!-- <svg class="webinar__play-icon">
+                <use href="images/sprite.svg#play"></use>
+              </svg> -->
+            </div>
+             <div class="webinar__progress">
+              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
+                value="invalid">
+            </div>
+           <!-- <div class="webinar__time">
+              <span class="webinar__min">0:43</span> / 3:12
+            </div>
+            <div class="webinar__sound">
+              <button class="webinar__sound-btn">
+                <svg class="webinar__sound-icon">
+                  <use href="images/sprite.svg#volume"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="webinar__increase">
+              <button class="webinar__increase-btn">
+                <svg class="webinar__increase-icon">
+                  <use href="images/sprite.svg#maximize"></use>
+                </svg>
+              </button>
+            </div> -->
+          </div>
+        </li>
+        <li class="webinar__item">
+          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
+          <p class="webinar__video-text">
+            How To Build Portofolio as A Designer
+          </p>
+          <div class="webinar__controls">
+            <div class="webinar__play">
+              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
+              <!-- <svg class="webinar__play-icon">
+                <use href="images/sprite.svg#play"></use>
+              </svg> -->
+            </div>
+            <!-- <div class="webinar__progress">
+              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
+                value="invalid">
+            </div>
+            <div class="webinar__time">
+              <span class="webinar__min">0:43</span> / 3:12
+            </div>
+            <div class="webinar__sound">
+              <button class="webinar__sound-btn">
+                <svg class="webinar__sound-icon">
+                  <use href="images/sprite.svg#volume"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="webinar__increase">
+              <button class="webinar__increase-btn">
+                <svg class="webinar__increase-icon">
+                  <use href="images/sprite.svg#maximize"></use>
+                </svg>
+              </button>
+            </div> -->
           </div>
         </li>
       </ul>
+    </div>
+  </div>
+</section>
+    <section class="pricing">
+  <div class="container">
+    <h2 class="pricing__title title">
+      Course Pricing
+    </h2>
+    <div class="pricing__text text">
+      Choose pricing that suits to your need.
+    </div>
+    <div class="pricing__list">
+      <ul class="pricing__items">
+        <li class="pricing__item">
+          <div class="pricing__top pricing__top--star">
+            <h4 class="pricing__top-title">
+              Free
+            </h4>
+            <span class="pricing__price"><i class="pricing__price-up">$</i>0</span>
+            <span class="pricing__months">/ month</span>
+          </div>
+          <div class="pricing__content">
+            <ul class="pricing__elements">
+              <li class="pricing__element">Free e-book for every class</li>
+              <li class="pricing__element">Materials update every day</li>
+              <li class="pricing__element">Free download material videos</li>
+              <li class="pricing__element">Unlock 5 material videos</li>
+            </ul>
+          </div>
+          <div class="pricing__bottom">
+            <button class="pricing__btn button" type="submit" disabled>Your Current Package</button>
+          </div>
+        </li>
+        <li class="pricing__item">
+          <div class="pricing__top pricing__top--key">
+            <h4 class="pricing__top-title">
+              Express
+            </h4>
+            <span class="pricing__price"><i class="pricing__price-up">$</i>75</span>
+            <span class="pricing__months">/ month</span>
+          </div>
+          <div class="pricing__content">
+            <ul class="pricing__elements">
+              <li class="pricing__element">Free e-book for every class</li>
+              <li class="pricing__element">Materials update every day</li>
+              <li class="pricing__element">Free download material videos</li>
+              <li class="pricing__element">Meeting 2 times a week</li>
+              <li class="pricing__element">Unlock 15 material videos</li>
+            </ul>
+          </div>
+          <div class="pricing__bottom">
+            <button class="pricing__btn button" type="submit">Buy Express</button>
+          </div>
+        </li>
+        <li class="pricing__item">
+          <span class="pricing__corner">Popular</span>
+          <div class="pricing__top pricing__top--crown">
+            <h4 class="pricing__top-title">
+              Premium
+            </h4>
+            <span class="pricing__price"><i class="pricing__price-up">$</i>115</span>
+            <span class="pricing__months">/ month</span>
+          </div>
+          <div class="pricing__content">
+            <ul class="pricing__elements">
+              <li class="pricing__element">Free e-book for every class</li>
+              <li class="pricing__element">Materials update every day</li>
+              <li class="pricing__element">Free download material videos</li>
+              <li class="pricing__element">Private chat with mentor</li>
+              <li class="pricing__element">Meeting 3 times a week</li>
+              <li class="pricing__element">Unlock up to 30 material videosk</li>
+              <li class="pricing__element">Unlimited saved class</li>
+            </ul>
+          </div>
+          <div class="pricing__bottom">
+            <button class="pricing__btn button" type="submit">Buy Express</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="apps">
+  <div class="container">
+    <div class="apps__inner">
+      <div class="apps__left">
+        <h2 class="apps__title title">
+          Get Our Apps, Now!
+        </h2>
+        <div class="apps__text text">
+          Reach out our apps everywhere and everytime with Sinauw Mobile Application.
+        </div>
+        <div class="apps__wrapper">
+          <a class="apps__link" href="#">
+            <img src="../images/apps/goole-play.png" alt="google play">
+          </a>
+          <a class="apps__link" href="#">
+            <img src="../images/apps/app-store.png" alt="app store">
+          </a>
+        </div>
+      </div>
+      <div class="apps__right">
+        <div class="apps__right-inner">
+          <div class="apps__notify">
+            <div class="apps__user">
+              <p class="apps__name">Hello, Alexander</p>
+              <span class="apps__level">
+                Premium Member
+              </span>
+            </div>
+            <div class="apps__content">
+              <h4 class="apps__subtilte">
+                Grow Your Skill, Join Now!
+              </h4>
+              <div class="apps__info">
+                We have something big for you who want to level up!
+              </div>
+            </div>
+            <div class="apps__bottom">
+              <div class="apps__progress">
+                <p class="apps__percentages-text">Courses Progress</p>
+                <button class="apps__btn-icon">
+                  <svg class="apps__icon">
+                    <use href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="apps__collection">
+                <p class="apps__percentages-text">Class Collections</p>
+                <button class="apps__btn-icon">
+                  <svg class="apps__icon">
+                    <use href="images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

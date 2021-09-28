@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    left: 89px;
 
     &::after {
       width: 0;
@@ -42,7 +43,7 @@
       border-color: #8aa8bd transparent;
     }
   }
-
+  //Рома, как реализовать переход между языками, при клике на кнопку?
   &__languages {
     position: absolute;
     top: 100%;

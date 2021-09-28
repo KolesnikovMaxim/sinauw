@@ -1,0 +1,251 @@
+.apps {
+  display: flex;
+  padding: 60px 0 100px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    width: 1200px;
+    height: 434px;
+    background: $gradient-2;
+  }
+
+  &__left {
+    width: 552px;
+    padding: 85px 0 104px 55px;
+    margin-right: 54px;
+  }
+
+  &__title,
+  &__text {
+    text-align: start;
+  }
+
+  &__title {
+    font-size: 47px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    width: 406px;
+    margin-bottom: 34px;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__right-inner {
+    width: 507px;
+    padding: 40px 105px 0 120px;
+    position: relative;
+
+    &::after {
+      @extend %after-before;
+      background-image: url(../images/apps/1.png);
+      width: 59px;
+      height: 59px;
+      top: 93px;
+      left: 39px;
+    }
+
+    &::before {
+      @extend %after-before;
+      background-image: url(../images/apps/2.png);
+      width: 44px;
+      height: 44px;
+      top: 212px;
+      left: 68px;
+    }
+  }
+
+  &__notify {
+    background: $gradient-3;
+    border: 1px solid $white-opacity-2;
+    border-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 285px;
+    height: 393px;
+    padding: 17px 20px 27px 20px;
+    position: relative;
+
+    &::before {
+      @extend %after-before;
+      background-image: url(../images/apps/3.png);
+      width: 51px;
+      height: 51px;
+      bottom: 127px;
+      right: -32px;
+    }
+  }
+
+  &__user {
+    position: relative;
+    left: 55px;
+    margin-bottom: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/svg/user.svg);
+      width: 38px;
+      height: 38px;
+      background-color: $white-opacity-6;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 8px;
+      border: 2px solid $white-opacity-2;
+      top: 0;
+      left: -55px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/svg/crown-apps.svg);
+      width: 23px;
+      height: 23px;
+      right: 55px;
+      top: 7px;
+    }
+
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.6;
+    color: $white-opacity-8;
+  }
+
+  &__level {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.6;
+    color: $white-opacity-8;
+  }
+
+  &__content {
+    width: 245px;
+    height: 112px;
+    background-color: $blue-opacuty-1;
+    border-radius: 16px;
+    border: 2px solid $white-opacity-2;
+    position: relative;
+    padding: 16px 30px 23px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 60px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/apps/lamp.png);
+      width: 68px;
+      height: 68px;
+      left: 15px;
+    }
+  }
+
+  &__subtilte {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: $white-opacity-8;
+    width: 108px;
+    margin-bottom: 7px;
+  }
+
+  &__info {
+    font-size: 8px;
+    color: $white-opacity-6;
+    width: 108px;
+  }
+
+  &__bottom {
+    display: flex;
+    position: relative;
+    z-index: 22;
+  }
+
+  &__progress,
+  &__collection {
+    display: flex;
+    align-items: flex-end;
+    width: 159px;
+    height: 94px;
+    background-color: $white-opacity-2;
+    border: 2px solid $white-opacity-2;
+    border-radius: 16px;
+    position: absolute;
+    padding: 0 13px 13px 13px;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: $white-opacity-6;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100px;
+    }
+
+  }
+
+  &__progress {
+    transform: translate(-110px, 0);
+
+    &::after {
+      background-image: url(../images/apps/progress.png);
+      width: 100px;
+      top: -40px;
+      right: 35px;
+    }
+  }
+
+  &__collection {
+    transform: translate(86px, 0);
+
+    &::after {
+      background-image: url(../images/apps/colection.png);
+      background-repeat: no-repeat;
+      width: 110px;
+      top: -40px;
+    }
+  }
+
+  &__percentages-text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: $white-opacity-6;
+  }
+
+  &__btn-icon {
+    display: flex;
+    position: relative;
+    right: -20px;
+    bottom: 2px;
+  }
+
+  //Цвет иконки не становиться белым, 
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: $white;
+    stroke-width: 2;
+  }
+
+}

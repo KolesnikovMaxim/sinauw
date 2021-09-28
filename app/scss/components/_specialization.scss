@@ -1,5 +1,28 @@
 .specialization {
   padding-bottom: 65px;
+  position: relative;
+
+  &::after {
+     content: '';
+     position: absolute;
+     background-image: url(../images/Vector-2.png);
+     background-repeat: no-repeat;
+     width: 650px;
+     height: 718px;
+     right: 0;
+     top: -54px;
+  }
+
+  &::before {
+     content: '';
+     position: absolute;
+     background-image: url(../images/Vector-3.png);
+     background-repeat: no-repeat;
+     width: 428px;
+     height: 681px;
+     bottom: -300px;
+     left: -13px;
+  }
 
   &__title {
     font-weight: 600;
@@ -7,6 +30,8 @@
     color: $white-opacity-8;
     margin-bottom: 20px;
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
 
   &__text {
@@ -18,26 +43,29 @@
 
   &__items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow: hidden;
     position: relative;
-    margin-bottom: 121px;
+    margin-bottom: 55px; 
+    height: 480px;
+    
   }
 
   &__item {
     width: 276px;
-    height: 436px;
+    height: 416px;
     background-color: $blue-opacuty-2;
     border-radius: 20px;
     border: 3px solid $blue-400;
     padding: 12px 12px 20px 12px;
-    transition: height 0.8s ease-in-out;
+    transition: height 0.6s ease-in-out;
+    z-index: 10;
     
     &:hover {
-      height: 519px;
+      height: 480px;
 
       .specialization__btn {
-        transform: translateY(0);
+        transform: translateY(-34px);
       }
     }
 
@@ -61,7 +89,7 @@
   }
 
   &__info {
-    margin-bottom: 40px;
+    margin-bottom: 23px;
   }
 
   &__class {
@@ -98,21 +126,22 @@
     grid-column-end: 3;
     position: relative;
     top: -20px;
-    margin-bottom: 28px;
+    margin-bottom: 43px;
   }
 
   &__btn {
     display: block;
     margin: 0 auto;
     transform: translateY(300px);
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 
   &__button {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: 700;
     display: block;
     margin: 0 auto;
+    padding: 12px 32px;
   }
 }

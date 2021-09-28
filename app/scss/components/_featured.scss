@@ -1,4 +1,17 @@
 .featured {
+  padding: 0 0 68px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/Vector-1.png);
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 718px;
+    right: 0;
+    top: -65px;
+  }
 
 
   &__items {

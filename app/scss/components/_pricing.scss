@@ -1,0 +1,137 @@
+.pricing {
+  padding: 85px 0 115px 0;
+
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    position: relative;
+    width: 372px;
+    height: 515px;
+    padding: 30px 36px 36px 29px;
+    background-color: $blue-opacuty-2;
+    border: 3px solid $blue-400;
+    border-radius: 20px;
+    color: $white-opacity-8;
+
+    //Все перепробывал, как сделать угол как на макете
+    &:last-child::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 36px solid transparent;
+      border-top: 36px solid $red-500;
+      border-right: 36px solid $red-500;
+      border-top-right-radius: 20px;
+    }
+  }
+
+  &__corner {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 20px;
+    right: 4px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &__top {
+    position: relative;
+    left: 90px;
+    margin-bottom: 10px;
+
+    &--star::after,
+    &--key::after,
+    &--crown::after {
+      content: '';
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      left: -90px;
+      top: 0;
+    }
+
+    &--star::after {
+      background-image: url(../images/svg/star.svg);
+    }
+
+    &--key::after {
+      background-image: url(../images/svg/key.svg);
+    }
+
+    &--crown::after {
+      background-image: url(../../images/svg/crown.svg);
+    }
+  }
+
+  &__top-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-size: 28px;
+    font-weight: 700;
+    color: $red-500;
+  }
+
+  &__price-up {
+    font-size: 14px;
+    vertical-align: super;
+    margin-right: 2px;
+    font-style: normal;
+  }
+
+  &__months {
+    font-weight: 500;
+    font-size: 11px;
+  }
+
+  &__content {
+    border-top: 1px solid $blue-400;
+    padding-top: 35px;
+  }
+
+  &__elements {
+    margin-bottom: 36px;
+  }
+
+  &__element {
+    position: relative;
+    left: 22px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/svg/ellipse.svg);
+      width: 10px;
+      height: 10px;
+      left: -22px;
+      top: 6px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+  }
+
+  &__btn {
+    width: 300px;
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: transparent;
+      color: $red-500;
+    }
+  }
+}

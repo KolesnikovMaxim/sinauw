@@ -1,0 +1,76 @@
+.slick-slider {}
+
+.slick-list {
+  padding-top: 10% !important;
+  padding-bottom: 2% !important;
+  padding-left: 33% !important;
+  padding-right: 15% !important;
+}
+
+.slick-dots {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slick-track {
+  max-width: 100% !important;
+  transform: translate3d(-95px, -125px, 0) !important;
+  perspective: 125px;
+}
+
+.slick-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  width: 100% !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s, opacity 1s;
+}
+
+.slick-snext,
+.slick-sprev {
+  display: block;
+
+  .webinar__nav {
+    display: none;
+  }
+}
+
+.slick-current {
+  opacity: 1;
+  position: relative;
+  display: block;
+  transform: translate3d(20px, 0, 0);
+  z-index: 2;
+}
+
+.slick-snext {
+  opacity: 1;
+  transform: translate3d(84%, 0, -70px) rotate3d(16, 100, 1, -3deg);
+  z-index: 1;
+
+  .webinar__play-btn {
+    top: 40%;
+    left: 56%;
+  }
+}
+
+.slick-sprev {
+  opacity: 1;
+  transform: translate3d(-80%, 0, -70px) rotate3d(-16, 100, 1, 3deg);
+
+  .webinar__play-btn {
+    top: 40%;
+    left: 33%;
+  }
+}
+
+
+

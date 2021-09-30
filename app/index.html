@@ -299,7 +299,7 @@
         </li>
         <li class="specialization__item">
           <div class="specialization__top">
-            <img src="../images/specialization/Rectangle.png" alt="technology" width="252" height="169">
+            <img src="../images/specialization/Rectangle-4.png" alt="technology" width="252" height="169">
             <span class="specialization__num">
               16 Videos
             </span>
@@ -330,9 +330,7 @@
       <button class="specialization__button button">Show All Classes</button>
   </div>
 </section>
-    <!-- Без понятия как, столько врмени убил на это, слайдер тоже отказывается работать нормально, не понимаю как его тоже сделать, зашел в тупик уже с этим блоком, как правильно реализовать этот блок,
-особенно с видео. -->
-<section class="webinar">
+    <section class="webinar">
   <div class="container">
     <h2 class="webinar__title title">
       Live Online Webinar
@@ -340,115 +338,91 @@
     <div class="webinar__text text">
       You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!
     </div>
-    <div class="webinar__video">
-      <ul class="webinar__items">
-        <li class="webinar__item">
-          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
-          <p class="webinar__video-text">
+    <ul class="webinar__items">
+      <div class="webinar__inner">
+        <li class="webinar__item webinar__slider-one">
+          <div class="webinar__name">
             How To Build Portofolio as A Designer
-          </p>
-          <div class="webinar__controls">
-            <div class="webinar__play">
-              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
-              <!-- <svg class="webinar__play-icon">
-                <use href="images/sprite.svg#play"></use>
-              </svg> -->
-            </div>
-            <!-- <div class="webinar__progress">
-              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
-                value="invalid">
-            </div> -->
-            <div class="webinar__time">
-              <span class="webinar__min">0:43</span> / 3:12
-            </div>
-            <div class="webinar__sound">
-              <button class="webinar__sound-btn">
-                <svg class="webinar__sound-icon">
-                  <use href="images/sprite.svg#volume"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="webinar__increase">
-              <button class="webinar__increase-btn">
-                <svg class="webinar__increase-icon">
-                  <use href="images/sprite.svg#maximize"></use>
-                </svg>
-              </button>
-            </div>
+          </div>
+          <img src="../images/bg-video.png" alt="bg-video">
+          <button class="webinar__play-btn" type="button">
+            <svg class="webinar__play">
+              <use href="images/sprite.svg#play"></use>
+            </svg>
+          </button>
+          <div class="webinar__nav">
+            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
+            <span class="webinar__time">0:49 / 3:12 </span>
+            <button class="webinar__volume-btn" type="button">
+              <svg class="webinar__volume">
+                <use href="images/sprite.svg#volume"></use>
+              </svg>
+            </button>
+            <button class="webinar__maximize-btn" type="button">
+              <svg class="webinar__maximize">
+                <use href="images/sprite.svg#maximize"></use>
+              </svg>
+            </button>
           </div>
         </li>
-        <li class="webinar__item">
-          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
-          <p class="webinar__video-text">
-            How To Build Portofolio as A Designer
-          </p>
-          <div class="webinar__controls">
-            <div class="webinar__play">
-              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
-              <!-- <svg class="webinar__play-icon">
-                <use href="images/sprite.svg#play"></use>
-              </svg> -->
-            </div>
-             <div class="webinar__progress">
-              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
-                value="invalid">
-            </div>
-           <!-- <div class="webinar__time">
-              <span class="webinar__min">0:43</span> / 3:12
-            </div>
-            <div class="webinar__sound">
-              <button class="webinar__sound-btn">
-                <svg class="webinar__sound-icon">
-                  <use href="images/sprite.svg#volume"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="webinar__increase">
-              <button class="webinar__increase-btn">
-                <svg class="webinar__increase-icon">
-                  <use href="images/sprite.svg#maximize"></use>
-                </svg>
-              </button>
-            </div> -->
+        <li class="webinar__item webinar__slider-two">
+          <div class="webinar__name">
+            User Interface Design Fundamental
+          </div>
+          <img src="../images/bg-video.png" alt="bg-video">
+          <button class="webinar__play-btn" type="button">
+            <svg class="webinar__play">
+              <use href="images/sprite.svg#play"></use>
+            </svg>
+          </button>
+          <div class="webinar__nav">
+            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
+            <span class="webinar__time">0:49 / 3:12 </span>
+            <button class="webinar__volume-btn" type="button">
+              <svg class="webinar__volume">
+                <use href="images/sprite.svg#volume"></use>
+              </svg>
+            </button>
+            <button class="webinar__maximize-btn" type="button">
+              <svg class="webinar__maximize">
+                <use href="images/sprite.svg#maximize"></use>
+              </svg>
+            </button>
           </div>
         </li>
-        <li class="webinar__item">
-          <!-- <video class="webinar__video-item" src="../video/Python.mp4#t=43"></video> -->
-          <p class="webinar__video-text">
-            How To Build Portofolio as A Designer
-          </p>
-          <div class="webinar__controls">
-            <div class="webinar__play">
-              <img class="webinar__play-icon" src="../../images/svg/play.svg" alt="">
-              <!-- <svg class="webinar__play-icon">
+        <li class="webinar__item webinar__slider-three">
+          <div class="webinar__name">
+            User Interface Design Fundamental
+          </div>
+          <img src="../images/bg-video.png" alt="bg-video">         
+            <button class="webinar__play-btn" type="button">
+              <svg class="webinar__play">
                 <use href="images/sprite.svg#play"></use>
-              </svg> -->
-            </div>
-            <!-- <div class="webinar__progress">
-              <input class="webinar__progress-bar styled-slider slider-progress" type="range" name="porgress"
-                value="invalid">
-            </div>
-            <div class="webinar__time">
-              <span class="webinar__min">0:43</span> / 3:12
-            </div>
-            <div class="webinar__sound">
-              <button class="webinar__sound-btn">
-                <svg class="webinar__sound-icon">
-                  <use href="images/sprite.svg#volume"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="webinar__increase">
-              <button class="webinar__increase-btn">
-                <svg class="webinar__increase-icon">
-                  <use href="images/sprite.svg#maximize"></use>
-                </svg>
-              </button>
-            </div> -->
+              </svg>
+            </button>
+          <div class="webinar__nav">  
+            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
+            <span class="webinar__time">0:49 / 3:12 </span>
+            <button class="webinar__volume-btn" type="button">
+              <svg class="webinar__volume">
+                <use href="images/sprite.svg#volume"></use>
+              </svg>
+            </button>
+            <button class="webinar__maximize-btn" type="button">
+              <svg class="webinar__maximize">
+                <use href="images/sprite.svg#maximize"></use>
+              </svg>
+            </button>
           </div>
         </li>
-      </ul>
-    </div>
+      </div>
+    </ul>
+    <a class="webinar__link" href="#">
+      See more webinar videos
+      <svg class="webinar__arrow">
+        <use href="images/sprite.svg#arrow"></use>
+      </svg>
+    </a>
   </div>
 </section>
     <section class="pricing">
@@ -693,7 +667,6 @@
       </div>
   </div>
 </footer>
-
   <script src="js/main.min.js"></script>
 </body>
 

@@ -1,31 +1,72 @@
 $(function () {
 
-  //slider
-  $('.webinar__items').slick({
+  // slider
+  var rev = $('.webinar__inner');
+  rev.on('init', function (event, slick, currentSlide) {
+    var
+      cur = $(slick.$slides[slick.currentSlide]),
+      next = cur.next(),
+      prev = cur.prev();
+    prev.addClass('slick-sprev');
+    next.addClass('slick-snext');
+    cur.removeClass('slick-snext').removeClass('slick-sprev');
+    slick.$prev = prev;
+    slick.$next = next;
+  }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    console.log('beforeChange');
+    var
+      cur = $(slick.$slides[nextSlide]);
+    console.log(slick.$prev, slick.$next);
+    slick.$prev.removeClass('slick-sprev');
+    slick.$next.removeClass('slick-snext');
+    next = cur.next(),
+      prev = cur.prev();
+    prev.prev();
+    prev.next();
+    prev.addClass('slick-sprev');
+    next.addClass('slick-snext');
+    slick.$prev = prev;
+    slick.$next = next;
+    cur.removeClass('slick-next').removeClass('slick-sprev');
+  });
+
+  rev.slick({
+    arrows: false,
+    dots: false,
+    focusOnSelect: true,
     infinite: true,
-    adaptiveHeight: true,
-    slidesToShow: 3,
+    centerMode: true,
+    slidesPerRow: 1,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '0',
+    swipe: true,
+    customPaging: function (slider, i) {
+      return '';
+    },
+    /*infinite: false,*/
   });
 
-  //languge
-  $('.header__button').on('click', function () {
-    $('.header__languages').toggleClass('header__languages--active')
-  });
+})
 
-  //input type=rang
-  for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-    e.style.setProperty('--value', e.value);
-    e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-    e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-    e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-  }
-
-  $(".webinar__video-item").click(function () {
-    $(".webinar__play").toggle();
-  });
-
-
+//languge
+$('.header__button').on('click', function () {
+  $('.header__languages').toggleClass('header__languages--active')
 });
+
+//input type=rang
+for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+}
+
+$(".webinar__video-item").click(function () {
+  $(".webinar__play").toggle();
+});
+
+
 
 //video player
 const video = document.querySelector('.webinar__video-item'),

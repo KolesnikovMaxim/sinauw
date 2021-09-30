@@ -1,6 +1,5 @@
-//Тут даже можешь не смотеть, без понятия как, столько врмени убил на это, слайдер тоже отказываеться работать нормально, не понимаю как его тоже сделать, зашел в тупик уже с этим блоком, как правильно реализовать этот блок, особенно с видео.
 .webinar {
-  padding: 109px 0 163px 0;
+  padding: 108px 0 163px 0;
   position: relative;
 
   &::before {
@@ -20,122 +19,145 @@
 
   &__text {
     position: relative;
-    margin-bottom: 104px;
+    margin-bottom: 84px;
     z-index: 99;
   }
 
   &__items {
-    
+    width: 1260px;
+    position: relative;
+    z-index: 99;
+  }
+
+  &__inner {
+    width: 1200px;
+    height: 424px;
+    margin: 0 auto;
   }
 
   &__item {
-    background-image: url(../images/bg-video.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 622px;
+    width: 622px; 
     height: 424px;
-    border-radius: 24px;
     position: relative;
-    min-width: 0;
-
+    background: $gradient;
+    margin: 0 auto;
+    border-radius: 23px;
 
     &::before {
       content: '';
-      // Почему градиент не работает с bg-color?
-      background: $gradient;
       position: absolute;
-      width: 622px;
-      height: 424px;
-      z-index: 1;
-      border-radius: 24px;
+      background: $gradient;
+      width: 624px;
+      height: 426px;
     }
   }
 
-  &__video-item {
-    position: relative;
-    max-width: 622px;
-    object-fit: cover;
+  &__slider-one {
+    width: 622px;
     height: 424px;
-    border-radius: 24px;
-    z-index: 2;
   }
 
-  &__video-text {
+  &__slider-two {
+    width: 622px;
+    height: 424px;
+  }
+
+  &__slider-three {
+    width: 622px;
+    height: 424px;
+  }
+
+  &__name {
     font-size: 20px;
     font-weight: 500;
-    color: $white-opacity-6;
+    color: $white-opacity-8;
     position: absolute;
-    top: 27px;
-    left: 43px;
-    z-index: 2;
+    top: 30px;
+    left: 50px;
+  }
+
+  &__play-btn {
+    position: absolute;
+    display: block;
+    background-color: $white-opacity-2;
+    border: 1px solid $white-opacity-2;
+    border-radius: 50%;
+    width: 94px;
+    height: 94px;
+    top: 40%;
+    left: 43%;
   }
 
   &__play {
-    position: absolute;
-    top: 35%;
-    left: 43%;
-    background-color: rgba(226, 226, 244, 0.3);
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-  }
-
-  &__play-icon {
-    position: absolute;
-    top: 25%;
-    left: 25px;
     width: 44px;
-    height: 46px;
-    z-index: 2;
-  }
-
-  &__progress {
+    height: 44px;
+    fill: $blue-opacuty-8;
     position: absolute;
-    bottom: 65px;
-    z-index: 1;
-    
+    top: 26px;
+    left: 28px;
   }
 
-  &__progress-bar {
-    width: 618px;
-    z-index: 2;
+  &__porgress {
+    width: 617px;
+    position: absolute;
+    bottom: 70px;
   }
 
   &__time {
+    font-weight: 500;
+    font-size: 20px;
+    color: $white-opacity-8;
     position: absolute;
     bottom: 27px;
     left: 43px;
-    z-index: 2;
   }
 
-  &__sound {
+  &__volume-btn {
     position: absolute;
     bottom: 22px;
-    right: 95px;
-    z-index: 3;
+    right: 90px;
   }
 
-  &__sound-icon {
+  &__volume {
+    fill: none;
+    stroke: $white-opacity-8;
+    stroke-width: 2px;
     width: 23px;
     height: 23px;
-    fill: none;
-    stroke: $white-opacity-6;
-    stroke-width: 2;
   }
 
-  &__increase {
+  &__maximize-btn {
     position: absolute;
     bottom: 22px;
     right: 50px;
-    z-index: 3;
   }
 
-  &__increase-icon {
-    fill: $white-opacity-6;
+  &__maximize {
+    fill: $white-opacity-8;
     width: 23px;
     height: 23px;
-    
   }
 
-  
+  &__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    color: $white-300;
+    position: absolute;
+    right: 127px;
+    bottom: 56px;
+    z-index: 999;
+  }
+
+  &__arrow {
+    fill: none;
+    stroke: $white-300;
+    stroke-width: 2px;
+    width: 24px;
+    height: 24px;
+  }
+
 }
+
+
+

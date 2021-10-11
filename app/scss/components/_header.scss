@@ -2,27 +2,9 @@
   padding: 20px 0 60px 0;
 
   &__inner {
-    display: grid;
-    grid-template-columns: 84px 586px 60px 105px;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-
-  &__items {
-    display: flex;
-  }
-
-  &__item {
-    color: $white-opacity-6;
-    transition: color 0.3s linear;
-
-    &:hover {
-      color: $white;
-    }
-
-    &:not(:last-child) {
-      margin-right: 44px;
-    }
   }
 
   &__wrapper {
@@ -30,6 +12,14 @@
     align-items: center;
     position: relative;
     left: 89px;
+
+    @include r-width($xl) {
+      left: 60px;
+    }
+
+    @include r-width($lg) {
+      left: 5px;
+    }
 
     &::after {
       width: 0;
@@ -43,7 +33,12 @@
       border-color: #8aa8bd transparent;
     }
   }
-  //Рома, как реализовать переход между языками, при клике на кнопку?
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+
   &__languages {
     position: absolute;
     top: 100%;
@@ -89,3 +84,174 @@
     fill: $white-300;
   }
 }
+
+@include r-width ($sm) {
+
+  .burger {
+    
+    &__items {
+      display: block;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background-color: $blue-300;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      z-index: 9999999;
+      border: 4px solid $white-300;
+      box-shadow: 1px 3px 5px $black-opacity-3;
+      cursor: pointer;
+      box-sizing: content-box;
+
+      &--active &__item--one {
+        transform: translate(-15px, 9px) rotate(-45deg);
+      }
+
+      &--active &__item--two {
+        transition-duration: 0s;
+        opacity: 0;
+      }
+
+      &--active &__item--three {
+        transform: translate(-15px, 9px) rotate(45deg);
+      }
+    }
+
+    &__item {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 4px;
+      background-color: $white;
+      border-radius: 13px;
+      transition-duration: 0.4s;
+
+      &--one {
+        top: 14px;
+      }
+
+      &--two {
+        top: 23px;
+      }
+
+      &--three {
+        bottom: 14px;
+      }
+    }
+
+
+  }
+}
+
+
+.menu {
+  position: relative;
+  transform: translate(-135px, 0);
+
+  @include r-width ($xl) {
+     transform: translate(-100px, 0);
+  }
+
+  @include r-width ($lg) {
+    transform: translate(-35px, 0);
+  }
+
+  @include r-width ($sm) {
+    display: block;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 9999990;
+    transition-duration: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &--open {
+      background-color: $black-opacity-3;
+      width: 100vw;
+      height: 100vh;
+      right: -35px;
+      bottom: 0px;
+      border-radius: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include r-width ($sm) {
+      display: none;
+
+      &--show {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__item {
+    color: $white-opacity-6;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 44px;
+
+      @include r-width ($sm) {
+        margin-bottom: 22px;
+      }
+    }
+
+    @include r-width ($sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      width: 100%;
+      opacity: 0;
+      animation-name: fadein;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__link {
+
+    @include r-width ($sm) {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+}
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+

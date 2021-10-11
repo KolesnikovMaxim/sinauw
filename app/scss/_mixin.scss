@@ -1,0 +1,11 @@
+@mixin r-width($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin l-height ($width) {
+  @media (max-height: $width+ "px") and (orientation: landscape){
+    @content;
+  }
+}

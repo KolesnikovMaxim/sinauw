@@ -9,47 +9,54 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-  <header class="header">
+<body id="body">
+  <header class="header" id="home">
   <div class="container">
     <div class="header__inner">
       <a class="header__logo logo" href="#">
         <img src="images/logo.svg" alt="logo" width="82" height="39">
       </a>
-      <div class="header__nav">
-        <ul class="header__items">
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Home
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Courses
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Webinar
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Pricing
-            </a>
-          </li>
-        </ul>
+      <div class="burger">
+        <div class="burger__items">
+          <span class="burger__item burger__item--one"></span>
+          <span class="burger__item burger__item--two"></span>
+          <span class="burger__item burger__item--three"></span>
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#home">
+                Home
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#courses">
+                Courses
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#webinar">
+                Webinar
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#pricing">
+                Pricing
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="header__wrapper">
-        <span class="header__lang">Eng</span>
-        <ul class="header__languages">
-          <li class="header__list">Rus</li>
-          <li class="header__list">Fra</li>
-        </ul>
-        <svg class="header__globe">
-          <use href="images/sprite.svg#globe"></use>
-        </svg>
         <button class="header__button" type="button">
+          <span class="header__lang">Eng</span>
+          <ul class="header__languages">
+            <li class="header__list">Rus</li>
+            <li class="header__list">Fra</li>
+          </ul>
+          <svg class="header__globe">
+            <use href="images/sprite.svg#globe"></use>
+          </svg>
           <svg class="header__down">
             <use href="images/sprite.svg#down"></use>
           </svg>
@@ -73,28 +80,28 @@
         <div class="skills__join">
           <ul class="skills__items">
             <li class="skills__item skills__item--user1">
-              <a href="" class="skills__link">
-                <img src="images/skills/1.png" alt="join" width="52" height="52">
+              <a class="skills__link" href="#">
+                <img src="images/skills/1.jpg" alt="join" width="52" height="52" style="border-radius: 100%;">
               </a>
             </li>
             <li class="skills__item skills__item--user2">
               <a class="skills__link" href="#">
-                <img src="images/skills/2.png" alt="join" width="52" height="52">
+                <img src="images/skills/2.jpg" alt="join" width="52" height="52" style="border-radius: 100%;">
               </a>
             </li>
             <li class="skills__item skills__item--user3">
               <a class="skills__link" href="#">
-                <img src="images/skills/3.png" alt="join" width="52" height="52">
+                <img src="images/skills/3.jpg" alt="join" width="52" height="52" style="border-radius: 100%;">
               </a>
             </li>
             <li class="skills__item skills__item--user4">
               <a class="skills__link" href="#">
-                <img src="images/skills/4.png " alt="join" width="52" height="52">
+                <img src="images/skills/4.jpg " alt="join" width="52" height="52" style="border-radius: 100%;">
               </a>
             </li>
             <li class="skills__item skills__item--user5">
               <a class="skills__link" href="#">
-                <img src="images/skills/5.png" alt="join" width="52" height="52">
+                <img src="images/skills/5.png" alt="join" width="52" height="52" style="border-radius: 100%;">
                 <svg class="skills__icon">
                   <use href="images/sprite.svg#plus"></use>
                 </svg>
@@ -111,17 +118,17 @@
         <h1 class="skills__title">
           Grow Your Skills To Advance Your Career Path.
         </h1>
-        <span class="skills__phrase">
-          We have something big for you who want to level up!
-        </span>
+        <div class="skills__phrase">
+          <p>We have something big for you who want to level up!</p>
+        </div>
         <form class="skills__search">
-          <input class="skills__input" type="text" name="search" id="search" placeholder="What do you want to learn...">
-          <input class="skills__button" type="submit" name="button" id="button">
-          <a class="skills__button-link" href="#">
+          <input class="skills__input" type="search" name="search" id="search"
+            placeholder="What do you want to learn...">
+          <button class="skills__button">
             <svg class="skills__button-icon">
               <use href="images/sprite.svg#search"></use>
             </svg>         
-          </a>
+          </button>
         </form>
         <span class="skills__subtitle">
           Suggestions
@@ -169,254 +176,215 @@
 
 </section>
     <section class="featured">
+  <h2 class="sr-only">Featured</h2>
   <div class="container">
-      <ul class="featured__items">
-        <li class="featured__item featured__item--people">
-          <span class="featured__title">
-            Get New Friends
-          </span>
-          <div class="featured__text">
+    <ul class="featured__items">
+      <li class="featured__item featured__item--people">
+        <h3 class="featured__title">
+          Get New Friends
+        </h3>
+        <div class="featured__text">
+          <p>
             You will meet new friends in some of classes that you take. Say hello to them and make friends, it will be
             so much warm friendship!
-          </div>
-        </li>
-        <li class="featured__item featured__item--teache">
-          <span class="featured__title">
-            Expert and Fun Mentor
-          </span>
-          <div class="featured__text">
+          </p>
+        </div>
+      </li>
+      <li class="featured__item featured__item--teache">
+        <h3 class="featured__title">
+          Expert and Fun Mentor
+        </h3>
+        <div class="featured__text">
+          <p>
             Learn with earnest and don’t forget to get relax too. Learn and enjoy the materials or classes with our
             expert mentors.
-          </div>
-        </li>
-        <li class="featured__item featured__item--heart-book">
-          <span class="featured__title">
-            Flexible Access
-          </span>
-          <div class="featured__text">
+          </p>
+        </div>
+      </li>
+      <li class="featured__item featured__item--heart-book">
+        <h3 class="featured__title">
+          Flexible Access
+        </h3>
+        <div class="featured__text">
+          <p>
             You can access materials or classes easily by our website also mobile. Access it everywhere and everytime,
             no limit for you to learn!
-          </div>
-        </li>
-      </ul>
+          </p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
-    <section class="specialization">
+    <section class="specialization" id="courses">
   <div class="container">
     <h2 class="specialization__title">
       What Do You Want to Learn?
     </h2>
-    <span class="specialization__text">
-      Choose the right class as you need. Then enjoy studying.
-    </span>
-      <ul class="specialization__items">
-        <li class="specialization__item">
-          <div class="specialization__top">
-            <img src="../images/specialization/Rectangle.png" alt="technology" width="252" height="169">
-            <span class="specialization__num">
-              12 Videos
-            </span>
+    <div class="specialization__text">
+      <p>Choose the right class as you need. Then enjoy studying.</p>
+    </div>
+    <ul class="specialization__items">
+      <li class="specialization__item">
+        <div class="specialization__top specialization__top--technology">
+          <span class="specialization__num">
+            12 Videos
+          </span>
+        </div>
+        <div class="specialization__info">
+          <span class="specialization__class">
+            Technology
+          </span>
+          <h3 class="specialization__subtitle">
+            Digital Marketing Strategy
+          </h3>
+          <div class="specialization__info-text">
+            This course aims to give you deeper understanding of core processes ...
           </div>
-          <div class="specialization__info">
-            <span class="specialization__class">
-              Technology
-            </span>
-            <h3 class="specialization__subtitle">
-              Digital Marketing Strategy
-            </h3>
-            <div class="specialization__info-text">
-              This course aims to give you deeper understanding of core processes ...
-            </div>
+        </div>
+        <div class="specialization__mentor">
+          <img src="../images/specialization/mentor-1.jpg" alt="mentor" width="40" height="40"
+            style="border-radius: 100%;">
+          <p class="specialization__name">
+            Joey Piere
+          </p>
+          <p class="specialization__specialty">
+            Mentor
+          </p>
+        </div>
+        <button class="specialization__btn button" type="button">Access Class</button>
+      </li>
+      <li class="specialization__item">
+        <div class="specialization__top specialization__top--design">
+          <span class="specialization__num">
+            7 Videos
+          </span>
+        </div>
+        <div class="specialization__info">
+          <span class="specialization__class">
+            Design
+          </span>
+          <h3 class="specialization__subtitle">
+            Figma Fundamental
+          </h3>
+          <div class="specialization__info-text">
+            These lessons and exercises will help you start designing with Figma ...
           </div>
-          <div class="specialization__mentor">
-            <img src="../images/specialization/mentor-1.png" alt="mentor" width="40" height="40">
-            <p class="specialization__name">
-              Joey Piere
-            </p>
-            <p class="specialization__specialty">
-              Mentor
-            </p>
+        </div>
+        <div class="specialization__mentor">
+          <img src="../images/specialization/mentor-2.jpg" alt="mentor" width="40" height="40"
+            style="border-radius: 100%;">
+          <p class="specialization__name">
+            Araya Sheila
+          </p>
+          <p class="specialization__specialty">
+            Mentor
+          </p>
+        </div>
+        <button class="specialization__btn button" type="button">Access Class</button>
+      </li>
+      <li class="specialization__item">
+        <div class="specialization__top specialization__top--coding">
+          <span class="specialization__num">
+            10 Videos
+          </span>
+        </div>
+        <div class="specialization__info">
+          <span class="specialization__class">
+            Coding
+          </span>
+          <h3 class="specialization__subtitle">
+            HTML Fundamental
+          </h3>
+          <div class="specialization__info-text">
+            Well organized and easy to make you understand tutorials with lots of ...
           </div>
-          <button class="specialization__btn button" type="button">Access Class</button>
-        </li>
-        <li class="specialization__item">
-          <div class="specialization__top">
-            <img src="../images/specialization/Rectangle-2.png" alt="technology" width="252" height="169">
-            <span class="specialization__num">
-              7 Videos
-            </span>
+        </div>
+        <div class="specialization__mentor">
+          <img src="../images/specialization/mentor-3.jpg" alt="mentor" width="40" height="40"
+            style="border-radius: 100%;">
+          <p class="specialization__name">
+            Ellisa Ruth
+          </p>
+          <p class="specialization__specialty">
+            Mentor
+          </p>
+        </div>
+        <button class="specialization__btn button" type="button">Access Class</button>
+      </li>
+      <li class="specialization__item">
+        <div class="specialization__top specialization__top--coding-2">
+          <span class="specialization__num">
+            16 Videos
+          </span>
+        </div>
+        <div class="specialization__info">
+          <span class="specialization__class">
+            Coding
+          </span>
+          <h3 class="specialization__subtitle">
+            Android App Development
+          </h3>
+          <div class="specialization__info-text">
+            Take your Android coding skills to the next level, advanced Android app ...
           </div>
-          <div class="specialization__info">
-            <span class="specialization__class">
-              Design
-            </span>
-            <h3 class="specialization__subtitle">
-              Figma Fundamental
-            </h3>
-            <div class="specialization__info-text">
-              These lessons and exercises will help you start designing with Figma ...
-            </div>
-          </div>
-          <div class="specialization__mentor">
-            <img src="../images/specialization/mentor-2.png" alt="mentor" width="40" height="40">
-            <p class="specialization__name">
-              Araya Sheila
-            </p>
-            <p class="specialization__specialty">
-              Mentor
-            </p>
-          </div>
-          <button class="specialization__btn button" type="button">Access Class</button>
-        </li>
-        <li class="specialization__item">
-          <div class="specialization__top">
-            <img src="../images/specialization/Rectangle-3.png" alt="technology" width="252" height="169">
-            <span class="specialization__num">
-              10 Videos
-            </span>
-          </div>
-          <div class="specialization__info">
-            <span class="specialization__class">
-              Coding
-            </span>
-            <h3 class="specialization__subtitle">
-              HTML Fundamental
-            </h3>
-            <div class="specialization__info-text">
-              Well organized and easy to make you understand tutorials with lots of ...
-            </div>
-          </div>
-          <div class="specialization__mentor">
-            <img src="../images/specialization/mentor-3.png" alt="mentor" width="40" height="40">
-            <p class="specialization__name">
-              Ellisa Ruth
-            </p>
-            <p class="specialization__specialty">
-              Mentor
-            </p>
-          </div>
-          <button class="specialization__btn button" type="button">Access Class</button>
-        </li>
-        <li class="specialization__item">
-          <div class="specialization__top">
-            <img src="../images/specialization/Rectangle-4.png" alt="technology" width="252" height="169">
-            <span class="specialization__num">
-              16 Videos
-            </span>
-          </div>
-          <div class="specialization__info">
-            <span class="specialization__class">
-              Coding
-            </span>
-            <h3 class="specialization__subtitle">
-              Android App Development
-            </h3>
-            <div class="specialization__info-text">
-              Take your Android coding skills to the next level, advanced Android app ...
-            </div>
-          </div>
-          <div class="specialization__mentor">
-            <img src="../images/specialization/mentor-4.png" alt="mentor" width="40" height="40">
-            <p class="specialization__name">
-              Wendy Troye
-            </p>
-            <p class="specialization__specialty">
-              Mentor
-            </p>
-          </div>
-          <button class="specialization__btn button" type="button">Access Class</button>
-        </li>
-      </ul> 
-      <button class="specialization__button button">Show All Classes</button>
+        </div>
+        <div class="specialization__mentor">
+          <img src="../images/specialization/mentor-4.jpg" alt="mentor" width="40" height="40"
+            style="border-radius: 100%;">
+          <p class="specialization__name">
+            Wendy Troye
+          </p>
+          <p class="specialization__specialty">
+            Mentor
+          </p>
+        </div>
+        <button class="specialization__btn button" type="button">Access Class</button>
+      </li>
+    </ul>
+    <button class="specialization__button button">Show All Classes</button>
   </div>
 </section>
-    <section class="webinar">
+    <!-- При добавлении 2 видео, cлетает video-js и если листать слайд, справой стороны он вообще не работает, даже если не
+добавлять второе видео, что может быть? -->
+<section class="webinar" id="webinar">
   <div class="container">
     <h2 class="webinar__title title">
       Live Online Webinar
     </h2>
     <div class="webinar__text text">
-      You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!
+      <p>You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!</p>
     </div>
-    <ul class="webinar__items">
-      <div class="webinar__inner">
+    <div class="webinar__inner">
+      <ul class="webinar__items">
         <li class="webinar__item webinar__slider-one">
           <div class="webinar__name">
-            How To Build Portofolio as A Designer
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">
-          <button class="webinar__play-btn" type="button">
-            <svg class="webinar__play">
-              <use href="images/sprite.svg#play"></use>
-            </svg>
-          </button>
-          <div class="webinar__nav">
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+          <video class="video-js webinar__video" id="my-player" controls
+            poster="../../images/bg-video.png">
+            <source src="../../video/Python.mp4" type="video/mp4">
+          </video>
         </li>
         <li class="webinar__item webinar__slider-two">
           <div class="webinar__name">
-            User Interface Design Fundamental
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">
-          <button class="webinar__play-btn" type="button">
-            <svg class="webinar__play">
-              <use href="images/sprite.svg#play"></use>
-            </svg>
-          </button>
-          <div class="webinar__nav">
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+          <!-- <video class="video-js webinar__video" id="my-player-two" controls
+            poster="../../images/bg-video.png">
+            <source src="../../video/Python.mp4" type="video/mp4">
+          </video> -->
         </li>
         <li class="webinar__item webinar__slider-three">
           <div class="webinar__name">
-            User Interface Design Fundamental
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">         
-            <button class="webinar__play-btn" type="button">
-              <svg class="webinar__play">
-                <use href="images/sprite.svg#play"></use>
-              </svg>
-            </button>
-          <div class="webinar__nav">  
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+           <!-- <video class="video-js webinar__video" id="my-player-three" controls
+             poster="../../images/bg-video.png">
+             <source src="../../video/Python.mp4" type="video/mp4">
+           </video> -->
         </li>
-      </div>
-    </ul>
+      </ul>
+    </div>
     <a class="webinar__link" href="#">
       See more webinar videos
       <svg class="webinar__arrow">
@@ -425,7 +393,9 @@
     </a>
   </div>
 </section>
-    <section class="pricing">
+
+
+    <section class="pricing" id="pricing">
   <div class="container">
     <h2 class="pricing__title title">
       Course Pricing
@@ -437,9 +407,9 @@
       <ul class="pricing__items">
         <li class="pricing__item">
           <div class="pricing__top pricing__top--star">
-            <h4 class="pricing__top-title">
+            <h3 class="pricing__top-title">
               Free
-            </h4>
+            </h3>
             <span class="pricing__price"><i class="pricing__price-up">$</i>0</span>
             <span class="pricing__months">/ month</span>
           </div>
@@ -451,15 +421,13 @@
               <li class="pricing__element">Unlock 5 material videos</li>
             </ul>
           </div>
-          <div class="pricing__bottom">
-            <button class="pricing__btn button" type="submit" disabled>Your Current Package</button>
-          </div>
+          <button class="pricing__btn button" type="button" disabled>Your Current Package</button>
         </li>
         <li class="pricing__item">
           <div class="pricing__top pricing__top--key">
-            <h4 class="pricing__top-title">
+            <h3 class="pricing__top-title">
               Express
-            </h4>
+            </h3>
             <span class="pricing__price"><i class="pricing__price-up">$</i>75</span>
             <span class="pricing__months">/ month</span>
           </div>
@@ -472,16 +440,14 @@
               <li class="pricing__element">Unlock 15 material videos</li>
             </ul>
           </div>
-          <div class="pricing__bottom">
-            <button class="pricing__btn button" type="submit">Buy Express</button>
-          </div>
+          <button class="pricing__btn button" type="button">Buy Express</button>
         </li>
         <li class="pricing__item">
           <span class="pricing__corner">Popular</span>
           <div class="pricing__top pricing__top--crown">
-            <h4 class="pricing__top-title">
+            <h3 class="pricing__top-title">
               Premium
-            </h4>
+            </h3>
             <span class="pricing__price"><i class="pricing__price-up">$</i>115</span>
             <span class="pricing__months">/ month</span>
           </div>
@@ -496,9 +462,7 @@
               <li class="pricing__element">Unlimited saved class</li>
             </ul>
           </div>
-          <div class="pricing__bottom">
-            <button class="pricing__btn button" type="submit">Buy Express</button>
-          </div>
+          <button class="pricing__btn button" type="submit">Buy Express</button>
         </li>
       </ul>
     </div>
@@ -507,12 +471,12 @@
     <section class="apps">
   <div class="container">
     <div class="apps__inner">
-      <div class="apps__left">
+      <div class="apps__mobile">
         <h2 class="apps__title title">
           Get Our Apps, Now!
         </h2>
         <div class="apps__text text">
-          Reach out our apps everywhere and everytime with Sinauw Mobile Application.
+          <p>Reach out our apps everywhere and everytime with Sinauw Mobile Application.</p>
         </div>
         <div class="apps__wrapper">
           <a class="apps__link" href="#">
@@ -523,8 +487,8 @@
           </a>
         </div>
       </div>
-      <div class="apps__right">
-        <div class="apps__right-inner">
+      <div class="apps__skill">
+        <div class="apps__skill-inner">
           <div class="apps__notify">
             <div class="apps__user">
               <p class="apps__name">Hello, Alexander</p>
@@ -533,14 +497,14 @@
               </span>
             </div>
             <div class="apps__content">
-              <h4 class="apps__subtilte">
+              <h3 class="apps__subtilte">
                 Grow Your Skill, Join Now!
-              </h4>
+              </h3>
               <div class="apps__info">
-                We have something big for you who want to level up!
+                <p>We have something big for you who want to level up!</p>
               </div>
             </div>
-            <div class="apps__bottom">
+            <div class="apps__skill-bottom">
               <div class="apps__progress">
                 <p class="apps__percentages-text">Courses Progress</p>
                 <button class="apps__btn-icon">
@@ -568,25 +532,39 @@
   </main>
 
   <footer class="footer">
+  <h2 class="sr-only">Footer</h2>
   <div class="container">
     <div class="footer__inner">
       <div class="footer__wrapper">
         <a class="footer__logo logo" href="#">
           <img src="images/logo.svg" alt="logo" width="117" height="56">
         </a>
-        <div class="footer__question">
+        <p class="footer__question">
           Any feedback or questions?Contact us on our social media
-        </div>
+        </p>
         <div class="footer__social">
-          <svg class="footer__icon footer__icon--facebook">
-            <use href="images/sprite.svg#facebook"></use>
-          </svg>
-          <svg class="footer__icon footer__icon--twitter">
-            <use href="images/sprite.svg#twitter"></use>
-          </svg>
-          <svg class="footer__icon footer__icon--instagram">
-            <use href="images/sprite.svg#instagram"></use>
-          </svg>
+          <ul class="footer__list">
+            <li class="footer__solial-item">
+              <a class="footer__solial-link" href="#">
+                <svg class="footer__icon footer__icon--facebook">
+                  <use href="images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__solial-item">
+              <a class="footer__solial-link" href="#">
+                <svg class="footer__icon footer__icon--twitter">
+                  <use href="images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__solial-item">
+              <svg class="footer__icon footer__icon--instagram">
+                <use href="images/sprite.svg#instagram"></use>
+              </svg>
+              <a class="footer__solial-link" href="#"></a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer__content">
@@ -597,35 +575,35 @@
                 Menu
               </h5>
             </li>
-            <li class="footer__item">             
-                <a class="footer__link" href="#">Home</a>              
+            <li class="footer__item">
+              <a class="footer__link" href="#">Home</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Courses</a>
+              <a class="footer__link" href="#">Courses</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Webinar</a>
+              <a class="footer__link" href="#">Webinar</a>
             </li>
           </ul>
         </div>
         <div class="footer__nav">
           <ul class="footer__items">
             <li class="footer__item">
-              <h5 class="footer__title">
+              <h3 class="footer__title">
                 Services
-              </h5>
+              </h3>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Materials Update</a>
+              <a class="footer__link" href="#">Materials Update</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Trusted Mentor</a>
+              <a class="footer__link" href="#">Trusted Mentor</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Free E-book</a>
+              <a class="footer__link" href="#">Free E-book</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Meeting</a>
+              <a class="footer__link" href="#">Meeting</a>
             </li>
           </ul>
         </div>
@@ -637,10 +615,10 @@
               </h5>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Terms & Conditions</a>
+              <a class="footer__link" href="#">Terms & Conditions</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Privacy Policy</a>
+              <a class="footer__link" href="#">Privacy Policy</a>
             </li>
           </ul>
         </div>
@@ -652,19 +630,19 @@
               </h5>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Google Play Store</a>
+              <a class="footer__link" href="#">Google Play Store</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">App Store</a>
+              <a class="footer__link" href="#">App Store</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-      <div class="footer__copy">
-        Copyright&copy
-        2021 Sinauw. All Rights Reserved.
-      </div>
+    <p class="footer__copy">
+      Copyright&copy
+      2021 Sinauw. All Rights Reserved.
+    </p>
   </div>
 </footer>
   <script src="js/main.min.js"></script>

@@ -1,0 +1,206 @@
+.vjs-poster {
+  border-radius: 30px;
+  width: 622px;
+  height: 424px;
+  background-color: transparent;
+
+  @include r-width($md) {
+    width: 468px;
+    height: 297px;
+  }
+
+  @include r-width($sm) {
+    width: 383px;
+    height: 254px;
+  }
+
+  @include r-width($xs) {
+    width: 63%;
+    height: 50%;
+  }
+}
+
+.video-js {
+  background-color: transparent;
+}
+
+.video-js .vjs-control {
+  width: 0;
+}
+
+.video-js .vjs-tech {
+  object-fit: cover;
+  border-radius: 23px;
+
+  @include r-width($xs) {
+    width: 63%;
+    height: 50%;
+  }
+}
+
+.video-js .vjs-big-play-button {
+  width: 94px;
+  height: 94px;
+  top: 40%;
+  left: 43%;
+  background-color: $white-opacity-2;
+  border: 1px solid $white-opacity-2;
+  border-radius: 100%;
+
+  @include r-width($sm) {
+    top: 30%;
+  }
+
+  @include r-width($xs) {
+    width: 55px;
+    height: 55px;
+    left: 23%;
+    top: 20%;
+  }
+}
+
+.vjs-icon-play:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  content: '';
+  background-image: url(../../images/svg/play.svg);
+  background-repeat: no-repeat;
+  top: 26px;
+  left: 33px;
+
+  @include r-width($xs) {
+    top: 9px;
+    left: 15px;
+  }
+}
+
+.video-js .vjs-progress-control {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+}
+
+.video-js .vjs-progress-control .vjs-progress-holder {
+  margin: 0 2px;
+  height: 8px;
+}
+
+.video-js .vjs-volume-panel {
+  display: block;
+  position: absolute;
+  right: 0;
+  right: 90px;
+}
+
+.video-js .vjs-play-progress:before {
+  content: '';
+  background-image: url(../../images/svg/progress.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.vjs-icon-pause:before,
+.video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+  display: none;
+}
+
+.vjs-icon-volume-high:before,
+.video-js .vjs-mute-control .vjs-icon-placeholder:before {
+  content: '';
+  background-image: url(../../images/svg/volume.svg);
+  width: 23px;
+  height: 23px;
+}
+
+.video-js .vjs-volume-control {
+  position: absolute;
+  right: -21px;
+  bottom: 11px;
+}
+
+.vjs-icon-volume-mid:before,
+.video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before {
+  content: "";
+}
+
+.vjs-icon-volume-low:before,
+.video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before {
+  content: "";
+}
+
+.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal,
+.video-js .vjs-volume-panel.vjs-hover .vjs-mute-control~.vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal {
+  position: absolute;
+  right: -21px;
+  bottom: 11px;
+}
+
+.vjs-icon-volume-mute:before,
+.video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
+  content: '';
+  background-image: url(../../images/svg/volume-mute.svg);
+  background-position: center;
+  width: 23px;
+  height: 23px;
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+  height: 8px;
+}
+
+.video-js .vjs-play-progress {
+  background-color: $red-500;
+}
+
+.vjs-has-started .vjs-control-bar {
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  height: 38px;
+  background-color: transparent;
+}
+
+.video-js .vjs-fullscreen-control {
+  position: absolute;
+  right: 40px;
+}
+
+.vjs-icon-fullscreen-enter:before,
+.video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
+  content: '';
+  background-image: url(../../images/svg/maximize.svg);
+  width: 23px;
+  height: 23px;
+}
+
+.vjs-icon-fullscreen-enter:hover,
+.video-js .vjs-fullscreen-control .vjs-icon-placeholder:hover {
+  background-color: red;
+}
+
+.vjs-icon-fullscreen-exit:before,
+.video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
+  content: "";
+}
+
+.video-js .vjs-picture-in-picture-control {
+  display: none;
+}
+
+.video-js .vjs-time-control {
+  font-size: 20px;
+  line-height: 1.5;
+  left: 24px;
+  color: $white-opacity-8;
+  font-weight: 500;
+}
+
+.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+  display: block;
+}

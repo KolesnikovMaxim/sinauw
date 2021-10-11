@@ -2,26 +2,46 @@
   padding-bottom: 65px;
   position: relative;
 
+  @include r-width ($md) {
+    padding-bottom: 15px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+
+    @include r-width ($xs) {
+      display: none;
+    }
+  }
+
+
   &::after {
-     content: '';
-     position: absolute;
-     background-image: url(../images/Vector-2.png);
-     background-repeat: no-repeat;
-     width: 650px;
-     height: 718px;
-     right: 0;
-     top: -54px;
+    background-image: url(../images/Vector-2.png);
+    width: 650px;
+    height: 718px;
+    right: 0;
+    top: -54px;
+
+    @include r-width ($md) {
+      width: 364px;
+      top: -250px;
+    }
+
+    @include r-width ($sm) {
+      top: -359px;
+    }
+
   }
 
   &::before {
-     content: '';
-     position: absolute;
-     background-image: url(../images/Vector-3.png);
-     background-repeat: no-repeat;
-     width: 428px;
-     height: 681px;
-     bottom: -300px;
-     left: -13px;
+    background-image: url(../images/Vector-3.png);
+    width: 428px;
+    height: 681px;
+    bottom: -300px;
+    left: -13px;
   }
 
   &__title {
@@ -39,6 +59,10 @@
     font-size: 18px;
     text-align: center;
     margin-bottom: 84px;
+
+    @include r-width($xl) {
+      margin-bottom: 40px;
+    }
   }
 
   &__items {
@@ -46,9 +70,28 @@
     justify-content: space-evenly;
     overflow: hidden;
     position: relative;
-    margin-bottom: 55px; 
+    margin-bottom: 55px;
     height: 480px;
-    
+
+    @include r-width($xl) {
+      margin-bottom: 20px;
+    }
+
+    @include r-width($lg) {
+      flex-wrap: wrap;
+      height: 920px;
+      margin-bottom: 5px;
+    }
+
+    @include r-width($md) {
+      height: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include r-width($sm) {
+      height: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   &__item {
@@ -58,13 +101,31 @@
     border-radius: 20px;
     border: 3px solid $blue-400;
     padding: 12px 12px 20px 12px;
-    transition: height 0.6s ease-in-out;
+    transition: height 0.5s ease-in-out;
     z-index: 10;
+
+    @include r-width($lg) {
+      width: 276px;
+      height: 416px;
+      flex: 0 1 40%;
+    }
+
+    @include r-width($md) {
+      margin-bottom: 20px;
+    }
+
+    @include r-width($sm) {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
     
+
     &:hover {
       height: 480px;
 
       .specialization__btn {
+        opacity: 1;
         transform: translateY(-34px);
       }
     }
@@ -77,6 +138,45 @@
   &__top {
     position: relative;
     margin-bottom: 24px;
+
+    &--technology,
+    &--design,
+    &--coding,
+    &--coding-2 {
+      width: 252px;
+      height: 169px;
+      border-radius: 13px;
+      
+      @include r-width($lg) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 356px;
+      }
+
+      @include r-width($md) {
+        width: 267px;
+      }
+
+      @include r-width($sm) {
+        width: 249px;
+      }
+    }
+
+    &--technology {
+      background-image: url(../images/specialization/Rectangle-1.jpg);
+    }
+
+    &--design {
+      background-image: url(../images/specialization/Rectangle-2.jpg);
+    }
+
+    &--coding {
+      background-image: url(../images/specialization/Rectangle-3.jpg);
+    }
+
+    &--coding-2 {
+      background-image: url(../images/specialization/Rectangle-4.jpg);
+    }
   }
 
   &__num {
@@ -132,8 +232,9 @@
   &__btn {
     display: block;
     margin: 0 auto;
-    transform: translateY(300px);
-    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity 0.5s ease-in-out;
   }
 
   &__button {
@@ -143,5 +244,7 @@
     display: block;
     margin: 0 auto;
     padding: 12px 32px;
+    position: relative;
+    z-index: 99;
   }
 }

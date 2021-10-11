@@ -15,6 +15,7 @@ $white-opacity-2: rgba(255, 255, 255, 0.2);
 $white-opacity-4: rgba(255, 255, 255, 0.4);
 $white-opacity-6: rgba(255, 255, 255, 0.6);
 $white-opacity-8: rgba(255, 255, 255, 0.8);
+$black-opacity-3: rgba(0, 0, 0, 0.3);
 $blue-opacuty: rgba(49, 52, 104, 0.8);
 $blue-opacuty-1: rgba(78, 72, 109, 1);
 $blue-opacuty-2: rgba(40, 43, 87, 0.2);
@@ -39,3 +40,15 @@ $gradient-3: linear-gradient(180deg, rgba(222, 221, 228, 0.8) 0%, rgba(255, 255,
   border-radius: 100%;
   border: 1px solid $white-opacity-2;
 }
+
+//Breakpoints 1200px 992px 768px, 576px
+
+$xl: 1200;
+$lg: 992;
+$md: 768;
+$sm: 576;
+$xs: 320;
+
+
+
+

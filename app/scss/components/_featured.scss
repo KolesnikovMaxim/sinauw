@@ -2,6 +2,10 @@
   padding: 0 0 66px 0;
   position: relative;
 
+  @include r-width($xl) {
+    padding: 0 0 35px 0;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -11,6 +15,18 @@
     height: 718px;
     right: 0;
     top: -65px;
+
+    @include r-width($xl) {
+      top: -95px;
+    }
+
+    @include r-width($lg) {
+      top: -97px;
+    }
+
+    @include r-width($md) {
+      width: 254px;
+    }
   }
 
 
@@ -18,11 +34,40 @@
     padding: 44px 0 103px 60px;
     display: flex;
     justify-content: space-around;
+    
+
+    @include r-width($lg) {
+      padding: 44px 0 49px 60px;
+    }
+
+    @include r-width($md) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
-    width: 305px;
+    max-width: 305px;
     position: relative;
+
+    @include r-width($lg) {
+      width: 216px;
+    }
+
+    @include r-width($md) {
+      width: 400px;
+    }
+
+    @include r-width($md) {
+      width: 226px;
+    }
+
+    &:not(:last-child) {
+
+      @include r-width($md) {
+        margin-bottom: 23px;
+      }
+    }
 
     &--people::after,
     &--teache::after,
@@ -54,6 +99,10 @@
     font-weight: 600;
     color: $white-opacity-8;
     margin-bottom: 23px;
+
+    @include r-width($lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {

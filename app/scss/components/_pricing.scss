@@ -1,9 +1,25 @@
 .pricing {
   padding: 106px 0 115px 0;
 
+  @include r-width($xl) {
+    padding: 20px 0 20px 0;
+  }
+
+  @include r-width($lg) {
+    padding: 15px 0 20px 0;
+  }
+
+  &__text {
+
+    @include r-width($xl) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__items {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -16,7 +32,20 @@
     border-radius: 20px;
     color: $white-opacity-8;
 
-    //Все перепробывал, как сделать угол как на макете
+    @include r-width ($md) {
+      width: 335px;
+      height: 468px;
+      padding: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include r-width ($md) {
+        margin-bottom: 15px;
+      }
+    }
+
     &:last-child::before {
       content: '';
       position: absolute;
@@ -42,6 +71,7 @@
     position: relative;
     left: 90px;
     margin-bottom: 10px;
+    display: inline-block;
 
     &--star::after,
     &--key::after,
@@ -94,6 +124,10 @@
   &__content {
     border-top: 1px solid $blue-400;
     padding-top: 35px;
+
+    @include r-width ($md) {
+      padding-top: 10px;
+    }
   }
 
   &__elements {
@@ -119,14 +153,19 @@
     }
   }
 
-  &__bottom {
+  &__btn {
+    width: 300px;
     position: absolute;
     bottom: 36px;
     right: 36px;
-  }
 
-  &__btn {
-    width: 300px;
+    @include r-width ($md) {
+      width: 260px;
+    }
+
+    @include r-width ($xs) {
+      width: 200px;
+    }
 
     &:disabled {
       opacity: 0.5;

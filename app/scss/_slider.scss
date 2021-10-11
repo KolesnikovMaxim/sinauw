@@ -1,10 +1,33 @@
-.slick-slider {}
-
 .slick-list {
   padding-top: 10% !important;
   padding-bottom: 2% !important;
   padding-left: 33% !important;
   padding-right: 15% !important;
+
+  @include r-width($xl) {
+    padding-left: 13% !important;
+  }
+
+  @include r-width($lg) {
+    padding-top: 14% !important;
+    padding-left: 0 !important;
+    padding-right: 8% !important;
+  }
+
+  @include r-width($md) {
+    padding-top: 18% !important;
+    padding-left: 3% !important;
+    padding-right: 0 !important;
+  }
+
+  @include r-width($sm) {
+    padding-top: 24% !important;
+  }
+
+  @include r-width($xs) {
+    padding-top: 44% !important;
+    padding-left: 23% !important;
+  }
 }
 
 .slick-dots {
@@ -19,6 +42,14 @@
   max-width: 100% !important;
   transform: translate3d(-95px, -125px, 0) !important;
   perspective: 125px;
+
+  @include r-width($xl) {
+    max-width: 60% !important;
+  }
+
+  @include r-width($lg) {
+    max-width: 45% !important;
+  }
 }
 
 .slick-slide {
@@ -29,7 +60,7 @@
   bottom: 0;
   margin: auto;
   opacity: 0;
-  width: 100% !important;
+  width: 95% !important;
   transform: translate3d(0, 0, 0);
   transition: transform 1s, opacity 1s;
 }
@@ -54,7 +85,10 @@
 .slick-snext {
   opacity: 1;
   transform: translate3d(84%, 0, -70px) rotate3d(16, 100, 1, -3deg);
-  z-index: 1;
+
+  @include r-width ($xl) {
+    transform: translate3d(84%, 0, -54px) rotate3d(16, 100, 1, -3deg);
+  }
 
   .webinar__play-btn {
     top: 40%;

@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @include r-width ($lg) {
+    background-size: 50%;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -12,19 +16,50 @@
     height: 718px;
     right: 0;
     bottom: -312px;
+
+    @include r-width ($xl) {
+      bottom: -282px;
+    }
+
+     @include r-width ($md) {
+       width: 260px;
+     }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: 736px 1fr;
     padding-bottom: 130px;
+
+    @include r-width ($xl) {
+      padding-bottom: 0;
+    }
+
+    @include r-width ($lg) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__students {
-    transform: translate(-45px, -10px);
+    transform: translate(-43px, 2px);
     position: relative;
 
+    @include r-width ($lg) {
+      transform: translate(0, 20px);
+    }
 
+    @include r-width ($md) {
+      height: 426px;
+      transform: translate(-37px, -75px);
+    }
+
+    @include r-width ($sm) {
+      height: 325px;
+    }
+
+    @include r-width ($xs) {
+      height: 255px;
+    }
 
     &::after,
     &::before {
@@ -38,14 +73,33 @@
       border-radius: 20px;
       border: 2px solid $blue-opacuty;
       padding: 40px;
+
+      @include r-width ($xs) {
+        padding: 20px;
+        background-size: 50%;
+      }
     }
 
     &::after {
       background-image: url(../images/svg/book.svg);
       top: 55px;
-      right: 35%;
       left: 72%;
       transform: rotate(12deg);
+
+      @include r-width ($lg) {
+        left: 50%;
+        top: 88;
+      }
+
+      @include r-width ($md) {
+        left: 60%;
+        top: 110px;
+      }
+
+      @include r-width ($xs) {
+        left: 91%;
+        top: 110px;
+      }
     }
 
     &::before {
@@ -53,11 +107,51 @@
       top: 19%;
       left: 8%;
       transform: rotate(-9deg);
+
+      @include r-width ($lg) {
+        left: 80%;
+        top: 55%;
+      }
+
+      @include r-width ($md) {
+        left: 71%;
+        top: 87%;
+      }
+
+      @include r-width ($sm) {
+        left: 84%;
+        top: 25%;
+      }
+
+      @include r-width ($xs) {
+        left: 80%;
+        top: 10%;
+      }
     }
   }
 
   &__img {
     max-width: 109%;
+
+    @include r-width ($lg) {
+      width: 495px;
+      height: 459px;
+    }
+
+    @include r-width ($md) {
+      width: 455px;
+      height: 454px;
+    }
+
+    @include r-width ($sm) {
+      width: 362px;
+      height: 359px;
+    }
+
+    @include r-width ($xs) {
+      height: 237px;
+      width: 240px;
+    }
   }
 
   &__join {
@@ -71,12 +165,31 @@
     border: 2px solid $blue-opacuty;
     transform: translate(357px, -111px);
     grid-column-start: 2;
+
+    @include r-width ($lg) {
+      transform: translate(498px, -277px) rotate(-10deg);
+      display: inline-grid;
+    }
+
+    @include r-width ($md) {
+      transform: translate(350px, -215px) rotate(10deg);
+    }
+
+    @include r-width ($sm) {
+      transform: translate(186px, -123px) rotate(-10deg);
+    }
+
+    @include r-width ($xs) {
+      transform: translate(40px, -40px) rotate(-10deg);
+      max-width: 215px;
+      padding: 10px;
+    }
+
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 50px);
-
   }
 
   &__item {
@@ -100,6 +213,10 @@
     }
   }
 
+  &__link {
+    border-radius: 50%;
+  }
+
   &__icon {
     fill: $blue-600;
     width: 30px;
@@ -117,6 +234,11 @@
     right: 40px;
     position: relative;
     text-align: center;
+
+    @include r-width ($xs) {
+      bottom: -70px;
+      left: -100px;
+    }
   }
 
   &__last {
@@ -125,6 +247,14 @@
 
   &__advance {
     padding-top: 90px;
+
+    @include r-width ($lg) {
+      padding-top: 30px;
+    }
+
+    @include r-width ($lg) {
+      padding-top: 0;
+    }
   }
 
   &__title {
@@ -133,35 +263,94 @@
     letter-spacing: -0.01em;
     font-weight: 600;
     color: $white-opacity-8;
-    width: 485px;
+    max-width: 485px;
     margin-bottom: 30px;
+
+    @include r-width ($xl) {
+      font-size: 45px;
+      max-width: 370px;
+      margin-bottom: 20px;
+    }
+
+    @include r-width ($lg) {
+      max-width: 992px;
+      text-align: center;
+      font-size: 38px;
+    }
+
+    @include r-width ($md) {
+      font-size: 34px;
+      text-align: center;
+      max-width: 768px;
+    }
   }
 
   &__phrase {
     display: block;
     font-size: 18px;
     margin-bottom: 54px;
+
+    @include r-width ($xl) {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    @include r-width ($lg) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    @include r-width ($md) {
+      text-align: center;
+    }
   }
 
   &__search {
     margin-bottom: 60px;
+
+    @include r-width ($lg) {
+     margin-bottom: 40px;
+    }
   }
 
   &__input {
     padding: 22px 80px 22px 32px;
     background-color: $blue-800;
     border-radius: 12px;
-    width: 506px;
+    max-width: 506px;
+    width: 100%;
     position: absolute;
     color: $white-opacity-4;
+    z-index: 99;
 
     &::placeholder {
       font-size: 16px;
       color: $white-opacity-4;
     }
+
+    @include r-width ($xl) {
+      max-width: 400px;
+    }
+
+    @include r-width ($lg) {
+      max-width: 962px;
+    }
+
+    @include r-width ($md) {
+      max-width: 738px;
+    }
+
+    @include r-width ($sm) {
+      max-width: 546px;
+    }
+
+    @include r-width ($xs) {
+      max-width: 290px;
+    }
   }
 
   &__button {
+    display: block;
     background-color: $blue-700;
     border-radius: 6px;
     width: 44px;
@@ -171,6 +360,20 @@
     position: relative;
     left: 79%;
     top: 9px;
+    z-index: 99;
+
+    @include r-width ($lg) {
+      display: inline-block;
+      left: 93%;
+    }
+
+    @include r-width ($md) {
+      left: 90%;
+    }
+
+    @include r-width ($xs) {
+      left: 78%;
+    }
   }
 
   &__button-icon {
@@ -180,8 +383,6 @@
     stroke: $blue-300;
     stroke-width: 2;
     position: relative;
-    left: 72%;
-    top: 21px;
   }
 
   &__subtitle {
@@ -189,7 +390,22 @@
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 34px;
+
+    @include r-width ($lg) {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    @include r-width ($md) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
+
+  &__directions {
+    text-align: center;
+  }
+
 
   &__direction {
     display: inline-block;
@@ -198,7 +414,6 @@
     border: 1px solid $blue-opacuty-6;
     position: relative;
     z-index: 10;
-
 
     &:not(:last-child) {
       margin: 0 17px 24px 0;

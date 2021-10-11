@@ -5,6 +5,18 @@
     grid-template-columns: 234px 850px;
     justify-content: space-around;
     padding: 48px 0 79px 0;
+
+    @include r-width($xl) {
+      grid-template-columns: 234px 729px;
+    }
+
+    @include r-width($md) {
+      grid-template-columns: 151px 600px;
+    }
+
+     @include r-width($sm) {
+       grid-template-columns: 140px 365px;
+     }
   }
 
   &__question {
@@ -12,6 +24,26 @@
     line-height: 1.7;
     color: $white-opacity-6;
     margin-bottom: 24px;
+
+    @include r-width($lg) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__solial-item {
+
+    &:not(:last-child) {
+      margin-right: 32px;
+
+      @include r-width($sm) {
+        margin-right: 15px;
+      }
+    }
   }
 
   &__icon{
@@ -24,10 +56,6 @@
       fill: $red-500;
     }
 
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
-
     &--facebook {
       width: 15px;
     }
@@ -36,6 +64,16 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include r-width($lg) {
+      justify-content: space-evenly;
+      padding-top: 22px;
+    }
+
+    @include r-width($sm) {
+      justify-content: center;
+      
+    }
   }
 
   &__title {
@@ -44,6 +82,12 @@
     color: $white-opacity-8;
     margin-bottom: 17px;
     line-height: 1.2;
+
+    @include r-width($md) {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
 
   &__link {
@@ -51,6 +95,22 @@
     font-size: 20px;
     color: $white-opacity-6;
     margin-bottom: 13px;
+    transition: color 0.5s ease-in-out;
+
+    @include r-width($xl) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    @include r-width($md) {
+      font-size: 14px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &__copy {

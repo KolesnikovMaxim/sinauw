@@ -1,6 +1,15 @@
+//При добавлении 2 видео, cлетает video-js и если листать слайд, справой стороны он вообще не работает, даже если не добавлять второе видео, что может быть? 
 .webinar {
   padding: 108px 0 163px 0;
   position: relative;
+
+  @include r-width($xl) {
+    padding: 20px 0 20px 0;
+  }
+
+  @include r-width($lg) {
+    padding: 20px 0 30px 0;
+  }
 
   &::before {
     content: '';
@@ -11,32 +20,62 @@
     height: 700px;
     top: -3px;
     left: -11px;
+
+     @include r-width($sm) {
+       width: 416px;
+     }
+
+     @include r-width ($xs) {
+       display: none;
+     }
   }
 
   &__title {
     margin-bottom: 20px;
+
+    @include r-width($sm) {
+      font-size: 14px;
+    }
   }
 
   &__text {
     position: relative;
     margin-bottom: 84px;
     z-index: 99;
+
+    @include r-width($lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+   &__inner {
+    max-width: 1200px;
+    height: 424px;
+    margin: 0 auto 20px;
+    
+     @include r-width($lg) {
+       max-width: 992px;
+     }
+
+     @include r-width($md) {
+       height: 305px;
+       margin: 0 auto 55px;
+     }
+
+     @include r-width($sm) {
+       height: 280px;
+       margin: 0 auto;
+     }
+
   }
 
   &__items {
-    width: 1260px;
     position: relative;
     z-index: 99;
   }
 
-  &__inner {
-    width: 1200px;
-    height: 424px;
-    margin: 0 auto;
-  }
-
   &__item {
-    width: 622px; 
+    width: 622px;
     height: 424px;
     position: relative;
     background: $gradient;
@@ -49,22 +88,53 @@
       background: $gradient;
       width: 624px;
       height: 426px;
+
+      @include r-width($sm) {
+        width: 383px;
+        height: 254px;
+      }
     }
   }
 
-  &__slider-one {
+  &__video {
     width: 622px;
     height: 424px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 23px;
+    object-fit: cover;
+
+    @include r-width($md) {
+      width: 468px;
+      height: 297px;
+    }
+
+     @include r-width($sm) {
+       width: 383px;
+       height: 254px;
+     }
+
+     @include r-width($xs) {
+       width: 355px;
+       height: 300px;
+     }
   }
 
-  &__slider-two {
-    width: 622px;
-    height: 424px;
-  }
-
+  &__slider-one,
+  &__slider-two,
   &__slider-three {
     width: 622px;
     height: 424px;
+
+    @include r-width($md) {
+      width: 468px;
+      height: 297px;
+    }
+
+    @include r-width($sm) {
+      width: 383px;
+      height: 254px;
+    }
   }
 
   &__name {
@@ -74,78 +144,28 @@
     position: absolute;
     top: 30px;
     left: 50px;
-  }
+    z-index: 2;
 
-  &__play-btn {
-    position: absolute;
-    display: block;
-    background-color: $white-opacity-2;
-    border: 1px solid $white-opacity-2;
-    border-radius: 50%;
-    width: 94px;
-    height: 94px;
-    top: 40%;
-    left: 43%;
-  }
+    @include r-width($sm) {
+      font-size: 16px;
+      width: 200px;
+      top: 15px;
+      left: 43px;
+    }
 
-  &__play {
-    width: 44px;
-    height: 44px;
-    fill: $blue-opacuty-8;
-    position: absolute;
-    top: 26px;
-    left: 28px;
-  }
-
-  &__porgress {
-    width: 617px;
-    position: absolute;
-    bottom: 70px;
-  }
-
-  &__time {
-    font-weight: 500;
-    font-size: 20px;
-    color: $white-opacity-8;
-    position: absolute;
-    bottom: 27px;
-    left: 43px;
-  }
-
-  &__volume-btn {
-    position: absolute;
-    bottom: 22px;
-    right: 90px;
-  }
-
-  &__volume {
-    fill: none;
-    stroke: $white-opacity-8;
-    stroke-width: 2px;
-    width: 23px;
-    height: 23px;
-  }
-
-  &__maximize-btn {
-    position: absolute;
-    bottom: 22px;
-    right: 50px;
-  }
-
-  &__maximize {
-    fill: $white-opacity-8;
-    width: 23px;
-    height: 23px;
+    @include r-width($xs) {
+      font-size: 14px;
+    }
   }
 
   &__link {
     display: flex;
+    justify-content: flex-end;
+    padding-right: 33px;
     font-weight: 500;
     font-size: 14px;
     color: $white-300;
-    position: absolute;
-    right: 127px;
-    bottom: 56px;
+    position: relative;
     z-index: 999;
   }
 

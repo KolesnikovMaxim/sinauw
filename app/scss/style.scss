@@ -2,7 +2,9 @@
 @import 'libs';
 @import 'reset';
 @import 'vars';
+@import 'mixin';
 @import 'global';
+
 
 @import './components/header';
 @import './components/footer';
@@ -17,3 +19,5 @@
 
 @import 'range';
 @import 'slider';
+@import 'videojs';
+

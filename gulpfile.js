@@ -73,7 +73,8 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-    'app/js/main.js'
+    'app/js/main.js',
+    'node_modules/video.js/dist/video.min.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
@@ -111,7 +112,7 @@ function cleanDist(){
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/**/*.scss'], styles);
   watch(['app/scss/**/*.scss']).on('change', browserSync.reload);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);

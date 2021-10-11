@@ -1,90 +1,44 @@
-<section class="webinar">
+<!-- При добавлении 2 видео, cлетает video-js и если листать слайд, справой стороны он вообще не работает, даже если не
+добавлять второе видео, что может быть? -->
+<section class="webinar" id="webinar">
   <div class="container">
     <h2 class="webinar__title title">
       Live Online Webinar
     </h2>
     <div class="webinar__text text">
-      You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!
+      <p>You can stream Webinar live on our apps. Stay update on our Webinar, it’s Free!</p>
     </div>
-    <ul class="webinar__items">
-      <div class="webinar__inner">
+    <div class="webinar__inner">
+      <ul class="webinar__items">
         <li class="webinar__item webinar__slider-one">
           <div class="webinar__name">
-            How To Build Portofolio as A Designer
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">
-          <button class="webinar__play-btn" type="button">
-            <svg class="webinar__play">
-              <use href="images/sprite.svg#play"></use>
-            </svg>
-          </button>
-          <div class="webinar__nav">
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+          <video class="video-js webinar__video" id="my-player" controls
+            poster="../../images/bg-video.png">
+            <source src="../../video/Python.mp4" type="video/mp4">
+          </video>
         </li>
         <li class="webinar__item webinar__slider-two">
           <div class="webinar__name">
-            User Interface Design Fundamental
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">
-          <button class="webinar__play-btn" type="button">
-            <svg class="webinar__play">
-              <use href="images/sprite.svg#play"></use>
-            </svg>
-          </button>
-          <div class="webinar__nav">
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+          <!-- <video class="video-js webinar__video" id="my-player-two" controls
+            poster="../../images/bg-video.png">
+            <source src="../../video/Python.mp4" type="video/mp4">
+          </video> -->
         </li>
         <li class="webinar__item webinar__slider-three">
           <div class="webinar__name">
-            User Interface Design Fundamental
+            <p>User Interface Design Fundamental</p>
           </div>
-          <img src="../images/bg-video.png" alt="bg-video">         
-            <button class="webinar__play-btn" type="button">
-              <svg class="webinar__play">
-                <use href="images/sprite.svg#play"></use>
-              </svg>
-            </button>
-          <div class="webinar__nav">  
-            <input class="webinar__porgress styled-slider slider-progress" type="range" name="progress" id="progress">
-            <span class="webinar__time">0:49 / 3:12 </span>
-            <button class="webinar__volume-btn" type="button">
-              <svg class="webinar__volume">
-                <use href="images/sprite.svg#volume"></use>
-              </svg>
-            </button>
-            <button class="webinar__maximize-btn" type="button">
-              <svg class="webinar__maximize">
-                <use href="images/sprite.svg#maximize"></use>
-              </svg>
-            </button>
-          </div>
+           <!-- <video class="video-js webinar__video" id="my-player-three" controls
+             poster="../../images/bg-video.png">
+             <source src="../../video/Python.mp4" type="video/mp4">
+           </video> -->
         </li>
-      </div>
-    </ul>
+      </ul>
+    </div>
     <a class="webinar__link" href="#">
       See more webinar videos
       <svg class="webinar__arrow">
@@ -93,3 +47,4 @@
     </a>
   </div>
 </section>
+
